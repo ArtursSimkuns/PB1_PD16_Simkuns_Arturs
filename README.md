@@ -134,6 +134,8 @@ PS C:\Users\robo\Documents\BUTS\Praktiskie_darbi\05 Programmas koda rakstīšana
 Switched to a new branch 'feature-uzlabojums'
 ```
 
+5. Merge
+
 
 
 
