@@ -136,6 +136,92 @@ Switched to a new branch 'feature-uzlabojums'
 
 5. Merge
 
+```powershell
+PS C:\Users\robo\Documents\BUTS\Praktiskie_darbi\05 Programmas koda rakstīšana (Kodēšana)\PB1_PD16 Versiju kontrole\PB1_PD16_Simkuns_Arturs> git add .
+PS C:\Users\robo\Documents\BUTS\Praktiskie_darbi\05 Programmas koda rakstīšana (Kodēšana)\PB1_PD16 Versiju kontrole\PB1_PD16_Simkuns_Arturs> git commit -m "Darbs ar zaru feature-uzlabojums"
+[feature-uzlabojums a8a82a7] Darbs ar zaru feature-uzlabojums
+ 2 files changed, 24 insertions(+), 1 deletion(-)
+PS C:\Users\robo\Documents\BUTS\Praktiskie_darbi\05 Programmas koda rakstīšana (Kodēšana)\PB1_PD16 Versiju kontrole\PB1_PD16_Simkuns_Arturs> git checkout main
+error: pathspec 'main' did not match any file(s) known to git
+PS C:\Users\robo\Documents\BUTS\Praktiskie_darbi\05 Programmas koda rakstīšana (Kodēšana)\PB1_PD16 Versiju kontrole\PB1_PD16_Simkuns_Arturs> git checkout master
+error: Your local changes to the following files would be overwritten by checkout:
+        README.md
+Please commit your changes or stash them before you switch branches.
+Aborting
+PS C:\Users\robo\Documents\BUTS\Praktiskie_darbi\05 Programmas koda rakstīšana (Kodēšana)\PB1_PD16 Versiju kontrole\PB1_PD16_Simkuns_Arturs> git add README.md
+PS C:\Users\robo\Documents\BUTS\Praktiskie_darbi\05 Programmas koda rakstīšana (Kodēšana)\PB1_PD16 Versiju kontrole\PB1_PD16_Simkuns_Arturs> git commit -m "Atjaunināts README"
+[feature-uzlabojums 1df6523] Atjaunināts README
+ 1 file changed, 2 insertions(+)
+PS C:\Users\robo\Documents\BUTS\Praktiskie_darbi\05 Programmas koda rakstīšana (Kodēšana)\PB1_PD16 Versiju kontrole\PB1_PD16_Simkuns_Arturs> git checkout master
+Switched to branch 'master'
+```
+
+```powershell
+PS C:\Users\robo\Documents\BUTS\Praktiskie_darbi\05 Programmas koda rakstīšana (Kodēšana)\PB1_PD16 Versiju kontrole\PB1_PD16_Simkuns_Arturs> git merge feature-uzlabojums
+Updating e46f8b8..1df6523
+Fast-forward
+ README.md   | 23 +++++++++++++++++++++++
+ projekts.py |  4 +++-
+ 2 files changed, 26 insertions(+), 1 deletion(-)
+```
+
+```powershell
+PS C:\Users\robo\Documents\BUTS\Praktiskie_darbi\05 Programmas koda rakstīšana (Kodēšana)\PB1_PD16 Versiju kontrole\PB1_PD16_Simkuns_Arturs> git log --oneline --graph --all
+* 1df6523 (HEAD -> master, feature-uzlabojums) Atjaunināts README
+* a8a82a7 Darbs ar zaru feature-uzlabojums
+* e46f8b8 Pirmais commit: pievienots projekts.py
+```
+
+6. Konflikta simulācija
+
+```powershell
+PS C:\Users\robo\Documents\BUTS\Praktiskie_darbi\05 Programmas koda rakstīšana (Kodēšana)\PB1_PD16 Versiju kontrole\PB1_PD16_Simkuns_Arturs> git checkout -b konflikts
+Switched to a new branch 'konflikts'
+```
+
+```powershell
+PS C:\Users\robo\Documents\BUTS\Praktiskie_darbi\05 Programmas koda rakstīšana (Kodēšana)\PB1_PD16 Versiju kontrole\PB1_PD16_Simkuns_Arturs> git checkout master
+M       projekts.py
+Switched to branch 'master'
+PS C:\Users\robo\Documents\BUTS\Praktiskie_darbi\05 Programmas koda rakstīšana (Kodēšana)\PB1_PD16 Versiju kontrole\PB1_PD16_Simkuns_Arturs> git merge konflikts
+Already up to date.
+PS C:\Users\robo\Documents\BUTS\Praktiskie_darbi\05 Programmas koda rakstīšana (Kodēšana)\PB1_PD16 Versiju kontrole\PB1_PD16_Simkuns_Arturs> git checkout -b konflikts
+fatal: a branch named 'konflikts' already exists
+PS C:\Users\robo\Documents\BUTS\Praktiskie_darbi\05 Programmas koda rakstīšana (Kodēšana)\PB1_PD16 Versiju kontrole\PB1_PD16_Simkuns_Arturs> git checkout konflikts   
+M       projekts.py
+Switched to branch 'konflikts'
+PS C:\Users\robo\Documents\BUTS\Praktiskie_darbi\05 Programmas koda rakstīšana (Kodēšana)\PB1_PD16 Versiju kontrole\PB1_PD16_Simkuns_Arturs> git add projekts.py
+PS C:\Users\robo\Documents\BUTS\Praktiskie_darbi\05 Programmas koda rakstīšana (Kodēšana)\PB1_PD16 Versiju kontrole\PB1_PD16_Simkuns_Arturs> git commit -m "Izmaiņas zarā konflikts"
+[konflikts 1316b02] Izmaiņas zarā konflikts
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+PS C:\Users\robo\Documents\BUTS\Praktiskie_darbi\05 Programmas koda rakstīšana (Kodēšana)\PB1_PD16 Versiju kontrole\PB1_PD16_Simkuns_Arturs> git checkout master
+Switched to branch 'master'
+PS C:\Users\robo\Documents\BUTS\Praktiskie_darbi\05 Programmas koda rakstīšana (Kodēšana)\PB1_PD16 Versiju kontrole\PB1_PD16_Simkuns_Arturs> git add projekts.py
+PS C:\Users\robo\Documents\BUTS\Praktiskie_darbi\05 Programmas koda rakstīšana (Kodēšana)\PB1_PD16 Versiju kontrole\PB1_PD16_Simkuns_Arturs> git commit -m "Izmaiņas zarā master"
+[master 758654d] Izmaiņas zarā master
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+PS C:\Users\robo\Documents\BUTS\Praktiskie_darbi\05 Programmas koda rakstīšana (Kodēšana)\PB1_PD16 Versiju kontrole\PB1_PD16_Simkuns_Arturs> git merge konflikts 
+Auto-merging projekts.py
+CONFLICT (content): Merge conflict in projekts.py
+Automatic merge failed; fix conflicts and then commit the result.
+PS C:\Users\robo\Documents\BUTS\Praktiskie_darbi\05 Programmas koda rakstīšana (Kodēšana)\PB1_PD16 Versiju kontrole\PB1_PD16_Simkuns_Arturs> git add projekts.py
+PS C:\Users\robo\Documents\BUTS\Praktiskie_darbi\05 Programmas koda rakstīšana (Kodēšana)\PB1_PD16 Versiju kontrole\PB1_PD16_Simkuns_Arturs> git commit -m "Atrisināts merge konflikts"
+[master f27e71e] Atrisināts merge konflikts
+```
+
+projekts.py
+
+```python
+print("Sveiks, Git!")
+
+<<<<<<< HEAD
+print("Feature zars aktīvs")
+print("Izmaiņas zarā master")
+=======
+print("Feature zars ir arī aktīvs")
+print("Izmaiņas zarā konflikts")
+>>>>>>> konflikts
+```
 
 
 
