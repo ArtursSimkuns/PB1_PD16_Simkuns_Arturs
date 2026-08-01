@@ -115,5 +115,26 @@ file:.git/config        core.ignorecase=true
 ```
 
 
+3. Pirmais commit
+
+```powershell
+PS C:\Users\robo\Documents\BUTS\Praktiskie_darbi\05 Programmas koda rakstīšana (Kodēšana)\PB1_PD16 Versiju kontrole\PB1_PD16_Simkuns_Arturs> git add .
+PS C:\Users\robo\Documents\BUTS\Praktiskie_darbi\05 Programmas koda rakstīšana (Kodēšana)\PB1_PD16 Versiju kontrole\PB1_PD16_Simkuns_Arturs> git commit -m "Pirmais commit: pievienots projekts.py"
+[master (root-commit) e46f8b8] Pirmais commit: pievienots projekts.py
+ 3 files changed, 120 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 README.md
+ create mode 100644 projekts.py
+```
+
+4. Darbs ar zaru (branch)
+
+```powershell
+PS C:\Users\robo\Documents\BUTS\Praktiskie_darbi\05 Programmas koda rakstīšana (Kodēšana)\PB1_PD16 Versiju kontrole\PB1_PD16_Simkuns_Arturs> git checkout -b feature-uzlabojums
+Switched to a new branch 'feature-uzlabojums'
+```
+
+
+
 
 
