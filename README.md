@@ -329,5 +329,61 @@ https://github.com/ArtursSimkuns/PB1_PD16_Simkuns_Arturs.git
 
 4. Pievienoju attālināto repozitoriju
 
+PowerShell logā projekta mapē izpildīju:
+
+```powershell
+git remote add origin https://github.com/ArtursSimkuns/PB1_PD16_Simkuns_Arturs.git
+```
+
+origin ir lokāls nosaukums, ar kuru Git turpmāk apzīmēs šo GitHub repozitoriju.
+
+Pārbaudīju:
+
+```powershell
+PS C:\Users\robo\Documents\BUTS\Praktiskie_darbi\05 Programmas koda rakstīšana (Kodēšana)\PB1_PD16 Versiju kontrole\PB1_PD16_Simkuns_Arturs> git remote -v
+origin  https://github.com/ArtursSimkuns/PB1_PD16_Simkuns_Arturs.git (fetch)
+origin  https://github.com/ArtursSimkuns/PB1_PD16_Simkuns_Arturs.git (push)
+```
+
+## 5. Nosūtīju main zaru uz GitHub
+
+Izpildīju:
+
+```powershell
+git push -u origin main
+```
+
+Šeit:
+- `push` nosūta lokālos commit uz GitHub;
+- `origin` ir attālinātā repozitorija nosaukums;
+- `main` ir nosūtāmais zars;
+- `-u` sasaista lokālo `main` ar attālināto `origin/main`.
+
+GitHub dokumentācijā `git push` tiek izmantots lokālo commit nosūtīšanai uz attālināto repozitoriju.
+
+Jáveic apstiprinajumi autentifikácijas logos:
+
+![alt text](Pielikumi/Atteli/attels4.png)
+
+Pēc veiksmīgas izpildes redzams:
+
+```powershell
+PS C:\Users\robo\Documents\BUTS\Praktiskie_darbi\05 Programmas koda rakstīšana (Kodēšana)\PB1_PD16 Versiju kontrole\PB1_PD16_Simkuns_Arturs> git push -u origin main
+info: please complete authentication in your browser...
+Enumerating objects: 41, done.
+Counting objects: 100% (41/41), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (38/38), done.
+Writing objects: 100% (41/41), 158.25 KiB | 22.61 MiB/s, done.
+Total 41 (delta 13), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (13/13), done.
+To https://github.com/ArtursSimkuns/PB1_PD16_Simkuns_Arturs.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+```
+
+![alt text](Pielikumi/Atteli/attels5.png)
+
+![alt text](Pielikumi/Atteli/attels6.png)
 
 
