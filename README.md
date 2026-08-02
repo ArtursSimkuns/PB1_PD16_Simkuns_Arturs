@@ -387,3 +387,12 @@ branch 'main' set up to track 'origin/main'.
 ![alt text](Pielikumi/Atteli/attels6.png)
 
 
+## 6. Papildus izmaiņas failā un to nosūtīšana uz repozitoriju
+
+```powershell
+git add .
+git commit -m "Atjaunināts README"
+git push
+```
+
+
