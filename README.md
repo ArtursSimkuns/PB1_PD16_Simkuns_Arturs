@@ -250,5 +250,97 @@ PS C:\Users\robo\Documents\BUTS\Praktiskie_darbi\05 Programmas koda rakstīšana
  1 file changed, 14 insertions(+)
 ```
 
+7. GitHub integrācija
 
+
+## 1. Izveidoju tukšu repozitoriju GitHub
+
+GitHub lapā spiedu `**New**`:
+
+![alt text](Pielikumi/Atteli/attels1.png)
+
+NorādĪju repozitorija nosaukumu:
+
+```
+Repository name: PB1_PD16_Simkuns_Arturs
+```
+
+Izvēlējos Public.
+
+Svarīg!: neatzīmēju šīs izvēles:
+
+```
+Add a README file
+Add .gitignore
+Choose a license
+```
+
+Manam lokālajam projektam šie faili un commit vēsture jau pastāv. GitHub arī iesaka, pievienojot esošu lokālu repozitoriju, neizveidot attālināto repozitoriju ar sākotnējiem failiem, lai nerastos nevajadzīgi konflikti.
+
+Pēc tam spiedu `**Create repository**`
+
+![alt text](Pielikumi/Atteli/attels2.png)
+
+![alt text](Pielikumi/Atteli/attels3.png)
+
+## 2. Pārbauīju lokālā zara nosaukumu
+
+Manā repozitorijā galvenais zars pašlaik ir `master`, nevis `main`.
+
+Pārbaude:
+
+```powershell
+PS C:\Users\robo\Documents\BUTS\Praktiskie_darbi\05 Programmas koda rakstīšana (Kodēšana)\PB1_PD16 Versiju kontrole\PB1_PD16_Simkuns_Arturs> git branch
+  feature-uzlabojums
+  konflikts
+* master
+```
+
+Uzdevumā ir prasīta komanda:
+```powershell
+git branch -M main
+```
+
+Tā pārdēvē pašreizējo zaru no master uz main.
+
+Izpildīju:
+```powershell
+git branch -M main
+```
+
+Pēc tam pārbaudīju:
+
+```powershell
+PS C:\Users\robo\Documents\BUTS\Praktiskie_darbi\05 Programmas koda rakstīšana (Kodēšana)\PB1_PD16 Versiju kontrole\PB1_PD16_Simkuns_Arturs> git branch
+  feature-uzlabojums
+  konflikts
+* main
+```
+
+Šī komanda nemaina commit saturu — tā pārdēvē tikai zara norādi.
+
+## 3. Nokopēju GitHub repozitorija URL
+
+Jaunizveidotajā GitHub repozitorijā izvēlejos HTTPS URL. Tā ir:
+
+```
+https://github.com/ArtursSimkuns/PB1_PD16_Simkuns_Arturs.git
+```
+
+4. Pievienoju attālināto repozitoriju
+
+PowerShell logā projekta mapē izpildi:
+
+git remote add origin https://github.com/ArtursSimkuns/PB1_PD16_Simkuns_Arturs.git
+
+origin ir lokāls nosaukums, ar kuru Git turpmāk apzīmēs šo GitHub repozitoriju.
+
+Pārbaudi:
+
+git remote -v
+
+Rezultātam jābūt līdzīgam:
+
+origin  https://github.com/ArtursSimkuns/PB1_PD16_Simkuns_Arturs.git (fetch)
+origin  https://github.com/ArtursSimkuns/PB1_PD16_Simkuns_Arturs.git (push)
 
