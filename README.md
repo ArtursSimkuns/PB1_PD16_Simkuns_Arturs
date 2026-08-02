@@ -329,18 +329,5 @@ https://github.com/ArtursSimkuns/PB1_PD16_Simkuns_Arturs.git
 
 4. Pievienoju attālināto repozitoriju
 
-PowerShell logā projekta mapē izpildi:
 
-git remote add origin https://github.com/ArtursSimkuns/PB1_PD16_Simkuns_Arturs.git
-
-origin ir lokāls nosaukums, ar kuru Git turpmāk apzīmēs šo GitHub repozitoriju.
-
-Pārbaudi:
-
-git remote -v
-
-Rezultātam jābūt līdzīgam:
-
-origin  https://github.com/ArtursSimkuns/PB1_PD16_Simkuns_Arturs.git (fetch)
-origin  https://github.com/ArtursSimkuns/PB1_PD16_Simkuns_Arturs.git (push)
 
